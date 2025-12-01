@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Tambah Motor</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="container">
+    <h1>Tambah Motor</h1>
+    <form method="post">
+      <label>Nama / Model</label><br>
+      <input name="title" required><br>
+      <label>Merk</label><br>
+      <input name="brand"><br>
+      <label>Tahun</label><br>
+      <input name="year" type="number"><br>
+      <label>Harga (angka)</label><br>
+      <input name="price" required><br>
+      <label>Deskripsi</label><br>
+      <textarea name="description"></textarea><br><br>
+      <button type="submit">Simpan</button> | <a href="{{ url_for('index') }}">Batal</a>
+    </form>
+  </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Detail Motor</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="container">
+    <h1>{{ motor[1] }}</h1>
+    <p>Merk: {{ motor[2] or '-' }} | Tahun: {{ motor[3] or '-' }}</p>
+    <p>Harga: Rp {{ '{:,.0f}'.format(motor[4]) }}</p>
+    <p>{{ motor[5] or '' }}</p>
+    <p><a href="{{ url_for('buy_motor', motor_id=motor[0]) }}">Beli Sekarang</a> | <a href="{{ url_for('index') }}">Kembali</a></p>
+  </div>
+</body>
+</html>

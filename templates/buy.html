@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Beli Motor</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="container">
+    <h1>Beli: {{ motor[1] }}</h1>
+    <form method="post">
+      <label>Nama Pembeli</label><br><input name="buyer" required><br>
+      <label>Telepon</label><br><input name="phone"><br>
+      <label>Alamat</label><br><textarea name="address"></textarea><br>
+      <label>Harga Bayar (default: {{ motor[2] }})</label><br><input name="price_paid"><br><br>
+      <button type="submit">Bayar & Catat</button> | <a href="{{ url_for('motor_detail', motor_id=motor[0]) }}">Batal</a>
+    </form>
+  </div>
+</body>
+</html>

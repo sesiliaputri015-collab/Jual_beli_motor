@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="id">
+<head><meta charset="utf-8"><title>Riwayat Pembelian</title><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"></head>
+<body>
+  <div class="container">
+    <h1>Riwayat Pembelian</h1>
+    <p><a href="{{ url_for('index') }}">Kembali</a></p>
+    <table>
+      <thead><tr><th>ID</th><th>Motor</th><th>Pembeli</th><th>Harga</th><th>Waktu (UTC)</th></tr></thead>
+      <tbody>
+        {% for r in rows %}
+        <tr>
+          <td>{{ r[0] }}</td>
+          <td>{{ r[1] }}</td>
+          <td>{{ r[2] }}</td>
+          <td>Rp {{ '{:,.0f}'.format(r[3]) }}</td>
+          <td>{{ r[4] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
